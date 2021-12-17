@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mini WebServer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="button-get-products">GET PRODUCTS <br> (/api/products)</button>
+
+  <br>
+
+  <button id="button-get-limit-products">GET PRODUCTS WITH PAGINATION <br> (/api/products?limit=5&page=1)</button>
+  <span>Limit: </span><input type="number" id="input-number-limit-id" min="1" value="5">
+  <span>Page: </span><input type="number" id="input-number-page-id" min="1" value="1">
+
+  <br>
+
+  <button id="button-get-id-products">GET PRODUCT WITH ID <br> (/api/products/id)</button>
+  <span>ID: </span><input type="number" id="input-number-get-id" min="1" value="1">
+
+  <br>
+
+  <div>
+    <textarea id="ajax-result" readonly></textarea>
+    <button id="button-textarea-ajax-result-clear">Очистить</button>
+    <button id="button-textarea-ajax-result-copy">Скопировать</button>
+  </div>
+
+  <hr>
+
+  <button id="button-post-create-product" disabled>POST CREATE PRODUCT <br> (/api/products)</button>
+  <button id="button-put-update-product" disabled>PUT UPDATE PRODUCT WITH ID <br> (/api/products)</button>
+
+  <div>
+    <textarea id="ajax-send"></textarea>
+    <button id="button-textarea-ajax-send-clear">Очистить</button>
+    <button id="button-textarea-ajax-send-copy">Скопировать</button>
+  </div>
+
+  <button id="button-delete-product">DELETE PRODUCT WITH ID <br> (/api/products/id)</button>
+  <span>ID: </span><input type="number" id="input-number-delete-id" min="1" value="1">
+
+  <hr>
+
+  <form id="form-upload-image">
+    <span>ID: </span><input type="number" id="input-number-photo-id" min="1" value="1">
+    <input type="file" name="image" id="input-image-file" accept=".jpg, .jpeg, .png, .bmp">
+    <button type="submit" id="button-upload-image">Отправить</button>
+  </form>
+
+  <script src="./javascript.js"></script>
+</body>
+</html>
